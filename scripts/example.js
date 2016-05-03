@@ -2,7 +2,7 @@ module.exports = function(robot) {
 
 	// robot.hear() will have the robot listen in on any channel it's in
 	robot.hear(/badger/i, function(response) {
-		response.send("Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGER")
+		response.send("Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS")
 	})
 
 	robot.hear(/i like (.+)/i, function(response) {
@@ -19,7 +19,7 @@ module.exports = function(robot) {
 
 	robot.hear(/give me pizza (.+)/i, function(response) {
 		// gives you a picture of a dang pizza
-		response.reply('https://media.giphy.com/media/uN1u4nLw0HIe4/giphy.gif')
+		response.send('https://media.giphy.com/media/uN1u4nLw0HIe4/giphy.gif')
 	})
 
 }
