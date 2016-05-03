@@ -39,6 +39,8 @@ module.exports = function(robot) {
 			response.reply("Nah, Backstop's got ya.")
 		} else if (weekday == "Mon" && day > 7){
 			response.reply("Maybe, but don't hold your breath.")
+		} else if (weekday == "Tue" && day > 7){
+			response.reply("It's TUESDAY!")
 		} else {
 			response.reply("You should bring lunch, but maybe assume donuts will happen.")
 		}
