@@ -18,8 +18,8 @@ module.exports = function(robot) {
 	})
 
 	// gives you a picture of a dang pizza
-	robot.hear(/pizza/i, function(response) {
-		response.send("https://media.giphy.com/media/uN1u4nLw0HIe4/giphy.gif")
-	})
+	// robot.hear(/pizza/i, function(response) {
+	// 	response.send("https://media.giphy.com/media/uN1u4nLw0HIe4/giphy.gif")
+	// })
 
 }
