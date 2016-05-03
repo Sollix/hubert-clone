@@ -39,7 +39,7 @@ module.exports = function(robot) {
 			response.reply("Nah, Backstop's got ya.")
 		} else if (weekday === 1 && day > 7){
 			response.reply("Maybe, but don't hold your breath.")
-		} else if (weekday === 2 && day > 7){
+		} else if (weekday === 2 && day < 7){
 			response.reply("It's TUESDAY!")
 		} else {
 			response.reply(weekday)
