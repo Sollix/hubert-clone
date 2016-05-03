@@ -22,8 +22,9 @@ module.exports = function(robot) {
 		response.send("https://media.giphy.com/media/uN1u4nLw0HIe4/giphy.gif")
 	})
 
+	//gives you the most recent release from a band on bandcamp
 	robot.hear(/bandcamp (.+)/i, function(response) {
 		var band = response.match[1]
-		response.send("https://" + band + ".bandcamp.com/releases")
+		response.reply("https://" + band.concat() + ".bandcamp.com/releases")
 	})
 }
