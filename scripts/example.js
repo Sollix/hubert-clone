@@ -18,8 +18,12 @@ module.exports = function(robot) {
 	})
 
 	// gives you a picture of a dang pizza
-	robot.hear(/pizza/i, function(response) {
+	robot.hear(/gimme pizza/i, function(response) {
 		response.send("https://media.giphy.com/media/uN1u4nLw0HIe4/giphy.gif")
 	})
 
+	robot.hear(/bandcamp (.+)/i, function(response) {
+		var band = response.match[1]
+		response.reply("https://" + band + "bandcamp.com/releases")
+	})
 }
