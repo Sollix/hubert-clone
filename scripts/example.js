@@ -2,7 +2,7 @@ module.exports = function(robot) {
 
 	// robot.hear() will have the robot listen in on any channel it's in
 	robot.hear(/badger/i, function(response) {
-		response.send("Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGER")
+		response.send("Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS")
 	})
 
 	robot.hear(/i like (.+)/i, function(response) {
