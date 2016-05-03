@@ -25,6 +25,7 @@ module.exports = function(robot) {
 	//gives you the most recent release from a band on bandcamp
 	robot.hear(/bandcamp (.+)/i, function(response) {
 		var band = response.match[1]
-		response.reply("https://" + concat(band) + ".bandcamp.com/releases")
+		var band = band.replace(/\s/g,'')
+		response.reply("https://" + band + ".bandcamp.com/releases")
 	})
 }
