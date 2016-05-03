@@ -35,7 +35,7 @@ module.exports = function(robot) {
 		var day = dateObj.getDate()
 		var weekday = dateObj.getDay()
 
-		if (weekday === 1 && day =< 7) {
+		if (weekday === 1 && day <= 7) {
 			response.reply("Nah, Backstop's got ya.")
 		} else if (weekday === 1 && day > 7){
 			response.reply("Maybe, but don't hold your breath.")
