@@ -17,4 +17,9 @@ module.exports = function(robot) {
 		response.reply('Call on ' + user.real_name + '!')
 	})
 
+	robot.hear(/give me pizza (.+)/i, function(response) {
+		// gives you a picture of a dang pizza
+		response.reply('https://media.giphy.com/media/uN1u4nLw0HIe4/giphy.gif')
+	})
+
 }
