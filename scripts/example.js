@@ -24,6 +24,6 @@ module.exports = function(robot) {
 
 	robot.hear(/bandcamp (.+)/i, function(response) {
 		var band = response.match[1]
-		response.reply("https://" + band + "bandcamp.com/releases")
+		response.send("https://" + band + ".bandcamp.com/releases")
 	})
 }
