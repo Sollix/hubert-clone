@@ -42,7 +42,7 @@ module.exports = function(robot) {
 		} else if (weekday == "Tue" && day > 7){
 			response.reply("It's TUESDAY!")
 		} else {
-			response.reply("You should bring lunch, but maybe assume donuts will happen.")
+			response.reply(weekday)
 		}
 	})
 }
