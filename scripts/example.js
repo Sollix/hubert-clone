@@ -23,14 +23,14 @@ module.exports = function(robot) {
 	})
 
 	//gives you the most recent release from a band on bandcamp
-	robot.hear(/bandcamp (.+)/i, function(response) {
+	robot.respond(/bandcamp (.+)/i, function(response) {
 		var band = response.match[1]
 		var band = band.replace(/\s/g,'')
 		response.reply("https://" + band + ".bandcamp.com/releases")
 	})
 
 	//tells you if it's free lunch monday at backstop
-	robot.hear(/do i need to bring lunch today\?/i, function(response) {
+	robot.respond(/do i need to bring lunch today\?/i, function(response) {
 		var dateObj = new Date()
 		var day = dateObj.getDate()
 		var weekday = dateObj.getDay()
@@ -38,8 +38,10 @@ module.exports = function(robot) {
 			response.reply("Nah, Backstop's got ya.")
 		} else if (weekday === 1 && day > 7){
 			response.reply("Maybe, but don't hold your breath.")
-		} else {
+		} else if (weekday > 1 && weekday =< 6){
 			response.reply("Yeah, you should probably get on that. But there will probably be donuts.")
+		} else {
+			response.reply("Come on man, it's the weekend. Get off slack.")
 		}
 	})
 
@@ -49,4 +51,6 @@ module.exports = function(robot) {
 		var randomUsername = robot.brain.data.users[userIds[Math.floor(Math.random() * userIds.length)]].name
 		response.send("\@" + randomUsername + " http://a.fod4.com/misc/Internet%20Pizza.gif")
 	})
+
+
 }
