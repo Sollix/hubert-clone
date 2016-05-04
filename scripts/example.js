@@ -42,4 +42,11 @@ module.exports = function(robot) {
 			response.reply("Yeah, you should probably get on that. But there will probably be donuts.")
 		}
 	})
+
+	//sends pizza to a random user
+	robot.respond(/who should i call on today\?/i, function(response) {
+		var userIds = Object.keys(robot.brain.data.users);
+		var randomUsername = robot.brain.data.users[userIds[Math.floor(Math.random() * userIds.length)]].name
+		response.reply(randomUsername + ":pizza:")
+	})
 }
