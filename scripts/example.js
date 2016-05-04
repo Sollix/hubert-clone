@@ -47,6 +47,6 @@ module.exports = function(robot) {
 	robot.respond(/send pizza/i, function(response) {
 		var userIds = Object.keys(robot.brain.data.users);
 		var randomUsername = robot.brain.data.users[userIds[Math.floor(Math.random() * userIds.length)]].name
-		response.send("\@" + randomUsername + ":pizza:")
+		response.send("\@" + randomUsername + "http://a.fod4.com/misc/Internet%20Pizza.gif")
 	})
 }
