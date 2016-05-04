@@ -38,7 +38,7 @@ module.exports = function(robot) {
 			response.reply("Nah, Backstop's got ya.")
 		} else if (weekday === 1 && day > 7){
 			response.reply("Maybe, but don't hold your breath.")
-		} else if (weekday > 1 && weekday =< 6){
+		} else if (weekday > 1 && weekday < 7){
 			response.reply("Yeah, you should probably get on that. But there will probably be donuts.")
 		} else {
 			response.reply("Come on man, it's the weekend. Get off slack.")
